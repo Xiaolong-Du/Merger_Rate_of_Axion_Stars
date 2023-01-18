@@ -255,62 +255,62 @@ def aFit(z, alpha=1.0/3.0):
     # Redshift dependence of the coefficient a in function xi_fit.
     # Here we provide the best-fit values for three cases, i.e. alpha=1/3, 2/5, 3/5.
     if   (alpha == 1.0/3.0):
-        aFit_a1 =  0.1073693502105049
-        aFit_a2 = -7.550823119030968e-5
-        aFit_a3 = -9.394346936634254e-7
+        aFit_a0 =  0.1073693502105049
+        aFit_a1 = -7.550823119030968e-5
+        aFit_a2 = -9.394346936634254e-7
     elif (alpha == 2.0/5.0):
-        aFit_a1 =  0.0986048913412091
-        aFit_a2 = -7.077992922728815e-5
-        aFit_a3 = -9.54236491420358e-7
+        aFit_a0 =  0.0986048913412091
+        aFit_a1 = -7.077992922728815e-5
+        aFit_a2 = -9.54236491420358e-7
     elif (alpha == 3.0/5.0):
-        aFit_a1 =  0.08004088067732483
-        aFit_a2 = -6.229715972804411e-5
-        aFit_a3 = -9.316841492655746e-7
+        aFit_a0 =  0.08004088067732483
+        aFit_a1 = -6.229715972804411e-5
+        aFit_a2 = -9.316841492655746e-7
     else:
         print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
         sys.exit()
 
-    return Fit_Parms(z, aFit_a1, aFit_a2, aFit_a3)
+    return Fit_Parms(z, aFit_a0, aFit_a1, aFit_a2)
 
 def bFit(z, alpha=1.0/3.0):
     # Redshift dependence of the coefficient b in function xi_fit.
     # Here we provide the best-fit values for three cases, i.e. alpha=1/3, 2/5, 3/5.
     if   (alpha == 1.0/3.0):
-        bFit_a1 =  0.006846928532021523
-        bFit_a2 = -1.4018636030025444e-05
-        bFit_a3 = -1.8508182226681663e-07
+        bFit_a0 =  0.006846928532021523
+        bFit_a1 = -1.4018636030025444e-05
+        bFit_a2 = -1.8508182226681663e-07
     elif (alpha == 2.0/5.0):
-        bFit_a1 =  0.006287499772726985
-        bFit_a2 = -1.3638100526511303e-05
-        bFit_a3 = -1.8643402238679904e-07
+        bFit_a0 =  0.006287499772726985
+        bFit_a1 = -1.3638100526511303e-05
+        bFit_a2 = -1.8643402238679904e-07
     elif (alpha == 3.0/5.0):
-        bFit_a1 =  0.005100772893734679
-        bFit_a2 = -1.3186809244289469e-05
-        bFit_a3 = -1.6858987952414607e-07
+        bFit_a0 =  0.005100772893734679
+        bFit_a1 = -1.3186809244289469e-05
+        bFit_a2 = -1.6858987952414607e-07
     else:
         print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
         sys.exit()
 
-    return Fit_Parms(z, bFit_a1, bFit_a2, bFit_a3)
+    return Fit_Parms(z, bFit_a0, bFit_a1, bFit_a2)
 
 def cFit(z, alpha=1.0/3.0):
     # Redshift dependence of the coefficient c in function xi_fit.
     # Here we provide the best-fit values for three cases, i.e. alpha=1/3, 2/5, 3/5.
     if   (alpha == 1.0/3.0):
-        cFit_a1 =  0.2710837775787107
-        cFit_a2 =  0.002475119558150311
-        cFit_a3 =  6.897719788729967e-05
+        cFit_a0 =  0.2710837775787107
+        cFit_a1 =  0.002475119558150311
+        cFit_a2 =  6.897719788729967e-05
     elif (alpha == 2.0/5.0):
-        cFit_a1 =  0.2658292263813366
-        cFit_a2 =  0.002676604452159939
-        cFit_a3 =  7.771099558819248e-05
+        cFit_a0 =  0.2658292263813366
+        cFit_a1 =  0.002676604452159939
+        cFit_a2 =  7.771099558819248e-05
     elif (alpha == 3.0/5.0):
-        cFit_a1 =  0.25777613079473727
-        cFit_a2 =  0.0027679089360191024
-        cFit_a3 =  0.000102357782379973
+        cFit_a0 =  0.25777613079473727
+        cFit_a1 =  0.0027679089360191024
+        cFit_a2 =  0.000102357782379973
     else:
         print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
         sys.exit()
 
-    return Fit_Parms(z, cFit_a1, cFit_a2, cFit_a3)
+    return Fit_Parms(z, cFit_a0, cFit_a1, cFit_a2)
 
