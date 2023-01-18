@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-from axion import *
-from formation_rate import *
+from MergerRateAxion.axion import *
+from MergerRateAxion.formation_rate import *
 
 mpl.rcParams['mathtext.fontset'] = 'cm'
 

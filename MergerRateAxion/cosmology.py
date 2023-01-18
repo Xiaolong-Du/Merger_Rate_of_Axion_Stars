@@ -1,7 +1,7 @@
 import numpy as np
 from scipy import special
 
-from constants import *
+from MergerRateAxion.constants import *
 
 hubble                = 0.6736
 OmegaM                = 0.3153

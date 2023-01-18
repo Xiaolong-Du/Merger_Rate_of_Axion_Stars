@@ -2,10 +2,10 @@ import numpy as np
 import scipy.integrate as integrate
 from scipy import interpolate
 
-from cosmology import *
-from sigmaM import *
-from axion import *
-from extended_Press_Schechter import *
+from MergerRateAxion.cosmology import *
+from MergerRateAxion.sigmaM import *
+from MergerRateAxion.axion import *
+from MergerRateAxion.extended_Press_Schechter import *
 
 # Halo mass function.
 # CDM

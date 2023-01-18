@@ -3,17 +3,17 @@ The python scripts compute the formation rate of dark matter halos at a certain 
 
 ## Files contained in the package
 
-**constants.py** : contains definitions of physical and astronomical constants
+**MergerRateAxion/constants.py** : contains definitions of physical and astronomical constants
 
-**cosmology.py** : cosmological parameters and some useful functions
+**MergerRateAxion/cosmology.py** : cosmological parameters and some useful functions
 
-**axion.py**     : things related to axion dark matter model, e.g. the core-halo mass relation
+**MergerRateAxion/axion.py**     : things related to axion dark matter model, e.g. the core-halo mass relation
 
-**sigmaM.py**    : fitting functions for $\sigma(M)$ and $\alpha(M) = \frac{d\ln \sigma}{d\ln M}$
+**MergerRateAxion/sigmaM.py**    : fitting functions for $\sigma(M)$ and $\alpha(M) = \frac{d\ln \sigma}{d\ln M}$
 
-**extended_Press_Schechter.py** : extended Press-Schechter formalism
+**MergerRateAxion/extended_Press_Schechter.py** : extended Press-Schechter formalism
 
-**formation_rate.py**: functions computing the formation rate of halos and axion stars
+**MergerRateAxion/formation_rate.py**: functions computing the formation rate of halos and axion stars
 
 **test.py**      : an example of computing the axion dark matter fractional decay rate to photons due to soliton major mergers and parametric resonance (see [citation] for more details)
 

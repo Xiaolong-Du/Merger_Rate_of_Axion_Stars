@@ -1,7 +1,7 @@
 import numpy as np
 
-from constants import *
-from cosmology import *
+from MergerRateAxion.constants import *
+from MergerRateAxion.cosmology import *
 
 # Jeans wavenumber.
 def k_J(ma, z):

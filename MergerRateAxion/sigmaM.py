@@ -1,6 +1,6 @@
 import numpy as np
 
-from axion import *
+from MergerRateAxion.axion import *
 
 # sigma(M)
 # alpha = dln sigma / dln M
