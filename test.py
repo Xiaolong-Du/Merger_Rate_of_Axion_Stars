@@ -56,25 +56,30 @@ plt.plot(zTab, starMassFractionTab3, \
 plt.plot(zTab, starMassFractionTab4, \
          label="$m_a=10^{-11}{\\rm eV},\,g_{a\\gamma\\gamma}=1.0\\times 10^{-13}{\\rm GeV}^{-1}$")
 
-g_a = 1.0e-10
-plt.plot(zTab, HMF_ST_FDM(M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp), zTab, m_a) \
-              *M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)                        \
-              *M_decay(m_a, g_a)/rho_mean_code*0.12, ls='dashed', c='k',label="$\\rm Fitting\,\,function$")
+# Compared with the fitting function.
+g_a    = 1.0e-10
+Mhcrit = M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)
+xi     = xi_fit(Mhcrit, aFit(zTab, alpha=slp), bFit(zTab, alpha=slp), cFit(zTab, alpha=slp))
+plt.plot(zTab, xi * HMF_ST_FDM(Mhcrit, zTab, m_a) * Mhcrit * M_decay(m_a, g_a) / rho_mean_code, \
+               ls='dashed', c='k',label="$\\rm Fitting\,\,function$")
 
-g_a = 1.0e-11
-plt.plot(zTab, HMF_ST_FDM(M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp), zTab, m_a) \
-              *M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)                        \
-              *M_decay(m_a, g_a)/rho_mean_code*0.12, ls='dashed', c='k')
+g_a    = 1.0e-11
+Mhcrit = M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)
+xi     = xi_fit(Mhcrit, aFit(zTab, alpha=slp), bFit(zTab, alpha=slp), cFit(zTab, alpha=slp))
+plt.plot(zTab, xi * HMF_ST_FDM(Mhcrit, zTab, m_a) * Mhcrit * M_decay(m_a, g_a) / rho_mean_code, \
+               ls='dashed', c='k')
 
-g_a = 1.0e-12
-plt.plot(zTab, HMF_ST_FDM(M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp), zTab, m_a) \
-              *M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)                        \
-              *M_decay(m_a, g_a)/rho_mean_code*0.12, ls='dashed', c='k')
+g_a    = 1.0e-12
+Mhcrit = M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)
+xi     = xi_fit(Mhcrit, aFit(zTab, alpha=slp), bFit(zTab, alpha=slp), cFit(zTab, alpha=slp))
+plt.plot(zTab, xi * HMF_ST_FDM(Mhcrit, zTab, m_a) * Mhcrit * M_decay(m_a, g_a) / rho_mean_code, \
+               ls='dashed', c='k')
 
-g_a = 1.0e-13
-plt.plot(zTab, HMF_ST_FDM(M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp), zTab, m_a) \
-              *M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)                        \
-              *M_decay(m_a, g_a)/rho_mean_code*0.12, ls='dashed', c='k')
+g_a    = 1.0e-13
+Mhcrit = M_halo_from_star_mass(M_decay(m_a, g_a), m_a, zTab, alpha=slp)
+xi     = xi_fit(Mhcrit, aFit(zTab, alpha=slp), bFit(zTab, alpha=slp), cFit(zTab, alpha=slp))
+plt.plot(zTab, xi * HMF_ST_FDM(Mhcrit, zTab, m_a) * Mhcrit * M_decay(m_a, g_a) / rho_mean_code, \
+               ls='dashed', c='k')
 
 plt.xlabel("$z$"    , fontsize=14)
 plt.ylabel("$df/dz$", fontsize=14)
