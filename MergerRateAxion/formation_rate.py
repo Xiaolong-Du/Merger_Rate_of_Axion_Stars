@@ -248,8 +248,8 @@ def xi_fit(Mh_crit, a, b, c):
     # Note that the fitting function is only accurate for 5 < z < 100, M_half < Mh_crit < 1.0e5 Msun.
     return (a + b * np.log10(Mh_crit/1.0e-6) ) / (1.0 + c * (Mh_crit/1.0e5)**0.39)
 
-def Fit_Parms(z, a1, a2, a3):
-    return a1 + a2 * z + a3 * z**2
+def Fit_Parms(z, a0, a1, a2):
+    return a0 + a1 * z + a2 * z**2
 
 def aFit(z, alpha=1.0/3.0):
     # Redshift dependence of the coefficient a in function xi_fit.
