@@ -15,7 +15,7 @@ The python scripts compute the formation rate of dark matter halos at a certain 
 
 `MergerRateAxion/formation_rate.py`: functions computing the formation rate of halos and axion stars
 
-`test.py`      : an example of computing the axion dark matter fractional decay rate to photons due to soliton major mergers and parametric resonance (see [citation] for more details)
+`example.py`                   : an example of computing the axion dark matter fractional decay rate to photons due to soliton major mergers and parametric resonance (see [citation] for more details)
 
 **Note that for computing $\sigma(M)$ we have taken the cosmological parameters from [Planck 2018 resutls](https://arxiv.org/abs/1807.06211):**
 
