@@ -129,7 +129,7 @@ def f_ST_Rate_FDM(M, z, ma, dz=1.0e-3, eps=1.0e-3):
 
 # Compute df/dz.
 # CDM
-def Compute_df_dz_Parkinson_2008_Major_Merger_CDM(z, ma, ga_gamma, alpha, Meps=1.0e-3, dz=1.0e-3):
+def Compute_df_dz_Parkinson_2008_Major_Merger_CDM(z, ma, ga_gamma, alpha, Meps=1.0e-3, dz=1.0e-3, massRatioDisrupted=0.0):
     # Critical halo mass.
     Mhalo_crit = M_halo_from_star_mass(M_decay(ma, ga_gamma), ma, z, alpha)
     
@@ -143,6 +143,9 @@ def Compute_df_dz_Parkinson_2008_Major_Merger_CDM(z, ma, ga_gamma, alpha, Meps=1
     # Assuming binary mergers: M = M1 + M2
     # (3/7)**alpha < M1/M2 < (7/3)**alpha
     majorMergerRatio = 3.0**(1.0/alpha) / (3.0**(1.0/alpha) + 7.0**(1.0/alpha))
+    
+    # Exclude the case that the smaller halo is tidally disrupted, i.e. min(M1 / M2, M2 / M1) < massRatioDisrupted.
+    majorMergerRatio = max(majorMergerRatio, massRatioDisrupted / (1.0 + massRatioDisrupted))
     
     # Number density of newly formed halos with masses between [Mhalo_crit, 2 * Mhalo_crit].
     NTab       = 100
@@ -185,7 +188,7 @@ def Compute_df_dz_Parkinson_2008_Major_Merger_CDM(z, ma, ga_gamma, alpha, Meps=1
     return massFraction/rho_mean_code, starMassFraction/rho_mean_code
 
 # FDM
-def Compute_df_dz_Parkinson_2008_Major_Merger_FDM(z, ma, ga_gamma, alpha, Meps=1.0e-3, dz=1.0e-3):
+def Compute_df_dz_Parkinson_2008_Major_Merger_FDM(z, ma, ga_gamma, alpha, Meps=1.0e-3, dz=1.0e-3, massRatioDisrupted=0.0):
     # Critical halo mass.
     Mhalo_crit = M_halo_from_star_mass(M_decay(ma, ga_gamma), ma, z, alpha)
     
@@ -200,6 +203,9 @@ def Compute_df_dz_Parkinson_2008_Major_Merger_FDM(z, ma, ga_gamma, alpha, Meps=1
     # (3/7)**alpha < M1/M2 < (7/3)**alpha
     majorMergerRatio = 3.0**(1.0/alpha) / (3.0**(1.0/alpha) + 7.0**(1.0/alpha))
     
+    # Exclude the case that the smaller halo is tidally disrupted, i.e. min(M1 / M2, M2 / M1) < massRatioDisrupted.
+    majorMergerRatio = max(majorMergerRatio, massRatioDisrupted / (1.0 + massRatioDisrupted))
+
     # Number density of newly formed halos with masses between [Mhalo_crit, 2 * Mhalo_crit].
     NTab       = 100
     MTab       = np.linspace(Mhalo_crit, 2.0*Mhalo_crit, NTab)
