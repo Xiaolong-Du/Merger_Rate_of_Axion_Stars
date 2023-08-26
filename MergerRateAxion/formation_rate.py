@@ -325,7 +325,7 @@ def aFit(z, alpha=1.0/3.0, massRatioDisrupted=0.0):
             print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
             sys.exit()
     else:
-        print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
+        print("Best-fit values for this 'massRatioDisrupted' is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
         sys.exit()
 
     return Fit_Parms(z, aFit_a0, aFit_a1, aFit_a2)
@@ -398,7 +398,7 @@ def bFit(z, alpha=1.0/3.0, massRatioDisrupted=0.0):
             print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
             sys.exit()
     else:
-        print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
+        print("Best-fit values for this 'massRatioDisrupted' is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
         sys.exit()
 
     return Fit_Parms(z, bFit_a0, bFit_a1, bFit_a2)
@@ -471,7 +471,7 @@ def cFit(z, alpha=1.0/3.0, massRatioDisrupted=0.0):
             print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
             sys.exit()
     else:
-        print("Best-fit values for this alpha is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
+        print("Best-fit values for this 'massRatioDisrupted' is not availble yet! Use the function Compute_df_dz_Parkinson_2008_Major_Merger_FDM instead.")
         sys.exit()
 
     return Fit_Parms(z, cFit_a0, cFit_a1, cFit_a2)
